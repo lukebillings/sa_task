@@ -7,10 +7,11 @@
 <h2>[........] [create]</h2>
 <br>
 <h2>Your Spirit Animals</h2>
-<br>
-<br>
-<br>
-<br>
+
+<% @spirit_animals.each do |spirit_animal| %>
+  <%= spirit_animal.name %>
+<% end %>
+
 <h2>Other Admin's Spirit Animals</h2>
 <br>
 <br>
