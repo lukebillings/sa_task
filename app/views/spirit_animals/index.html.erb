@@ -2,15 +2,20 @@
 <br>
 <br>
 <h2>Create a Spirit Animal</h2>
-<br>
-<br>
-<h2>[........] [create]</h2>
-<br>
+
+<%= form_for(@spirit_animal) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
 <h2>Your Spirit Animals</h2>
 
-<% @spirit_animals.each do |spirit_animal| %>
-  <%= spirit_animal.name %>
-<% end %>
+<ul>
+  <% @spirit_animals.each do |spirit_animal| %>
+   <li><%= spirit_animal.name %></li>
+  <% end %>
+</ul>
 
 <h2>Other Admin's Spirit Animals</h2>
 <br>

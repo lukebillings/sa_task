@@ -1,13 +1,9 @@
 class SpiritAnimalsController < ApplicationController
 
-# can test in postman
   # skip_before_action :verify_authenticity_token
 
   def index
     @spirit_animals = SpiritAnimal.all
-  end
-
-  def new
     @spirit_animal = SpiritAnimal.new
   end
 
@@ -15,7 +11,7 @@ class SpiritAnimalsController < ApplicationController
     @spirit_animal = SpiritAnimal.new(spirit_animal_params)
     @spirit_animal.user = current_user
     if @spirit_animal.save
-      redirect_to index_path
+      redirect_to spirit_animals_path
     end
   end
 
