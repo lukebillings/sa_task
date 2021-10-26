@@ -1,0 +1,2 @@
+class SpiritAnimal < ApplicationRecord
+end

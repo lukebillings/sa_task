@@ -1,0 +1,2 @@
+module SpiritAnimalsHelper
+end
