@@ -17,14 +17,22 @@
   <% end %>
 </ul>
 
-<h2>Other Admins' Spirit Animals</h2>
+<!-- if current user = admin user display -->
+
+<!-- admins_spirit_animals -->
+
+<h2>Admins' Spirit Animals</h2>
 <ul>
   <% @spirit_animals.each do |spirit_animal| %>
    <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
   <% end %>
 </ul>
 
-<h2>Other Users' Spirit Animals</h2>
+<!-- if current user = admin user display -->
+
+<!-- regular_users_spirit_animals
+ -->
+<h2>Regular Users' Spirit Animals</h2>
 <ul>
   <% @spirit_animals.each do |spirit_animal| %>
    <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
