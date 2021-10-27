@@ -1,6 +1,9 @@
 class SpiritAnimalsController < ApplicationController
 
-  # skip_before_action :verify_authenticity_token
+# skip_before_action :verify_authenticity_token
+
+#require login on homepage
+ before_action :authenticate_user!
 
   def index
     @spirit_animals = SpiritAnimal.all
