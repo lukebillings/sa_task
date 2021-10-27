@@ -20,7 +20,7 @@
                         required: true,
                         input_html: { autocomplete: "new-password" },
                         placeholder: "••••••" %>
-            <%= f.input :admin, label: "Tick here if you are an admin"  %>
+            <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false, label: "I am an Admin" %>
             </div>
 
           <div class="form-actions">

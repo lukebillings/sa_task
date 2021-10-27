@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :spirit_animals
 
 
-  # attr_accessor :email, :password, :admin
+  # attr_accessor :admin
 
 end
