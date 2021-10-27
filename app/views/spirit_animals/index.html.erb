@@ -1,40 +1,40 @@
-<h1>Welcome to Spirit Animal App!</h1>
-<br>
-<h2>Create a Spirit Animal</h2>
+<div class="home-container">
+  <h1>👋 <strong>Welcome to Spirit Animal App!</strong></h1>
 
-<%= simple_form_for(@spirit_animal) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
-
-<br>
-
-<h2>Your Spirit Animals</h2>
-
-<ul>
-  <% @my_spirit_animals.each do |spirit_animal| %>
-   <li><%= spirit_animal.name %></li>
+<div class="create-spirit-animal">
+  <h2>Create a Spirit Animal</h2>
+  <%= simple_form_for(@spirit_animal) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit 'Create', class: "submit" %>
   <% end %>
-</ul>
+</div>
 
-<!-- if current user = admin user display -->
 
-<!-- admins_spirit_animals -->
+<div class="spirit-list">
+    <h3> Your Spirit Animals</h3>
+  <ul>
+    <% @my_spirit_animals.each do |spirit_animal| %>
+     <li><%= spirit_animal.name %></li>
+    <% end %>
+  </ul>
 
-<h2>Admins' Spirit Animals</h2>
-<ul>
-  <% @spirit_animals.each do |spirit_animal| %>
-   <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
+  <!-- only show this area if it is an admin -->
+
+  <% if current_user.admin == true %>
+  <h3>Admins' Spirit Animals</h3>
+  <ul>
+    <% @admins_spirit_animals.each do |spirit_animal| %>
+     <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
+    <% end %>
+  </ul>
+  <h3>Regular Users' Spirit Animals</h3>
+  <ul>
+    <% @regular_users_spirit_animals.each do |spirit_animal| %>
+     <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
+    <% end %>
+  </ul>
   <% end %>
-</ul>
 
-<!-- if current user = admin user display -->
+</div>
 
-<!-- regular_users_spirit_animals
- -->
-<h2>Regular Users' Spirit Animals</h2>
-<ul>
-  <% @spirit_animals.each do |spirit_animal| %>
-   <li><%= spirit_animal.name %> - by <%= spirit_animal.user.email %></li>
-  <% end %>
-</ul>
+</div>

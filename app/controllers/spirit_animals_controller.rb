@@ -6,9 +6,10 @@ class SpiritAnimalsController < ApplicationController
  before_action :authenticate_user!
 
   def index
-    @spirit_animals = SpiritAnimal.all
-    @my_spirit_animals = current_user.spirit_animals
-    @spirit_animal = SpiritAnimal.new
+      @spirit_animal = SpiritAnimal.new
+      @my_spirit_animals = current_user.spirit_animals
+      @admins_spirit_animals = SpiritAnimal.joins(:user).where(user: { admin: true })
+      @regular_users_spirit_animals = SpiritAnimal.joins(:user).where(user: { admin: false })
   end
 
   def create

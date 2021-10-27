@@ -1,3 +1,35 @@
 // Place all the styles related to the spirit_animals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.home-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #006cc9;
+  color: #fff;
+  border-radius: 1.5em;
+  ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+}
+
+.submit {
+  background-color: #ffae5a;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.7em 1.5em;
+  color: white;
+    &:hover {
+      background-color: #e85d5d
+    }
+}
+
+.spirit-list {
+  padding-top: 20px;
+}
+
+.create-spirit-animal {
+  padding-top: 20px;
+  max-width: 320px;
+}
