@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :spirit_animals
+  has_many :spirit_animals
+
+
+  # attr_accessor :email, :password, :admin
+
 end
