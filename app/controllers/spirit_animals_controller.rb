@@ -7,6 +7,7 @@ class SpiritAnimalsController < ApplicationController
 
   def index
     @spirit_animals = SpiritAnimal.all
+    @my_spirit_animals = current_user.spirit_animals
     @spirit_animal = SpiritAnimal.new
   end
 
@@ -14,7 +15,7 @@ class SpiritAnimalsController < ApplicationController
     @spirit_animal = SpiritAnimal.new(spirit_animal_params)
     @spirit_animal.user = current_user
     if @spirit_animal.save
-      redirect_to spirit_animals_path
+      redirect_to root_path
     end
   end
 
