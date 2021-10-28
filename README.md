@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
 * Configuration
 
-* Database creation
+- ruby 2.5.1
+- rails 6.1.4
+- PostgreSQL 14.0
 
-* Database initialization
+* Commands to get it running locally
 
-* How to run the test suite
+- bundle install
+- yarn install
+- rails db:create
+- rails db:migrate
+- rails s
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
