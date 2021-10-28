@@ -5,8 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :spirit_animals
-
-
-  # attr_accessor :admin
-
 end

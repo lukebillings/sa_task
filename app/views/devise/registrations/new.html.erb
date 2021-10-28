@@ -2,35 +2,35 @@
 
   <h2>Sign up</h2>
 
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-          <div class="form-inputs form-login">
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" },
-                        placeholder: "user@company.com" %>
-            <%= f.input :password,
-                        required: true,
-                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password" },
-                        placeholder: "••••••" %>
-            <%= f.input :password_confirmation,
-                        required: true,
-                        input_html: { autocomplete: "new-password" },
-                        placeholder: "••••••" %>
-            <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false, label: "I am an Admin" %>
-            </div>
+      <div class="form-inputs form-login">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    placeholder: "user@company.com" %>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" },
+                    placeholder: "••••••" %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" },
+                    placeholder: "••••••" %>
+        <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false, label: "I am an Admin" %>
+        </div>
 
-          <div class="form-actions">
-            <%= f.button :submit, "Sign up",  class: "btn btn-primary" %>
-          </div>
-        <% end %>
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up",  class: "btn btn-primary" %>
+      </div>
+    <% end %>
 
-<div class="registration-links">
-  <%= render "devise/shared/links" %>
-</div>
+  <div class="registration-links">
+    <%= render "devise/shared/links" %>
+  </div>
 
 </div>
 

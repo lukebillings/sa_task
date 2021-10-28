@@ -1,15 +1,11 @@
-
 <div class="navbar navbar-light">
   <%= link_to "/", class: "navbar-brand" do %>
     <h1>home!</h1>
   <% end %>
 
- <!--    <div class="navbar-nav mr-auto"> -->
-      <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-button" %>
-      <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-button" %>
-      <% end %>
-<!--     </div> -->
-
-  </div>
+  <% if user_signed_in? %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-button" %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path, class: "nav-button" %>
+  <% end %>
+</div>
